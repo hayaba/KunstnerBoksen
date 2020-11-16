@@ -1,0 +1,179 @@
+/*
+Theme Name: Kunstner Boksen
+Author: Suong and Haya
+Version: 1.0
+*/
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+h1, a {
+    font-family: 'Pangolin', cursive;
+    margin: 20px 0 0 0;
+}
+
+.description {
+   margin: 0;
+}
+
+a:link, a:visited {
+    color: #006ec3;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.65em;
+}
+
+/* General Layout */
+div.container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+article.post {
+    border-bottom: 2px dotted #bbbbbb;
+}
+
+article.post:last-of-type {
+border-bottom: none;
+}
+
+/* Header */
+.site-header {
+border-bottom: 2px solid #999;
+}
+
+/* Footer */
+.site-footer {
+    margin: 30px;
+    border-top: 2px solid #999;
+}
+
+/* Navigation Menus*/
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav ul:before, .site-nav ul:after {content: ""; display: table;}
+.site-nav ul:after {clear: both;}
+.site-nav ul {*zoom: 1;}
+
+.site-nav ul li {
+    list-style: none;
+    float: right;
+}
+
+/*Site header Menu */
+.site-header nav ul li {
+    margin-right: 5px;
+}
+
+.site-header nav ul li a:link, .site-header nav ul li a:visited {
+    display: block;
+    padding: 10px 18px;
+    border: 1px solid #bbbbbb;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.site-header nav ul li a:hover {
+    background-color: #bbbbbb;
+}
+
+.site-header nav ul li.current-menu-item a:link,
+.site-header nav ul li.current-menu-item a:visited,
+.site-header nav ul li.current_page_ancestor a:link,
+.site-header nav ul li.current_page_ancestor a:visited {
+    font-weight: bold;
+    background-color: #006ec3;
+    color: #ffffff;
+}
+
+/* Footer Menu */
+.site-footer nav ul li {
+    margin-right: 10px;
+    padding: 10px;
+    border-right: 1px dotted #bbbbbb;
+}
+
+/* Page Layout */
+article.page h2 {
+    font-size: 300%;
+}
+
+/* Clearfix */
+.clearfix:before, .clearfix:after {content: ""; display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+
+/* Two Column Title Layout */
+div.title-column {
+    width: 30%;
+    float: left;
+}
+
+div.text-column {
+    width: 70%;
+    float: right;
+}
+
+/* Info Box Styles */
+div.info-box {
+    width: 30%;
+    float: right;
+    margin: 0 0 30px 30px;
+    padding: 20px;
+    background-color: #eeeeee;
+}
+
+div.info-box h4 {
+    margin-bottom: 6px;
+}
+
+div.info-box p {
+   font-size: 85%;
+}
+
+/* Children Links*/
+.children-links {
+    margin-bottom: 20px;
+    font-size: 80%;
+    color: #006ec3;
+}
+
+.children-links :any-link .children-links:visited {
+    text-decoration: none;
+    
+}
+
+.children-links ul {
+    float: left;
+    
+}
+
+.children-links li {
+    margin-right: 20px;
+}
+.children-links .parent-link {
+    float: left;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #dddddd;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.children-links .parent-link a:link, .children-links a:visited {
+    color: #006ec3;
+}
+
+.children-links .current_page_item a:link, .children-links .current_page_item a:visited{
+    border-bottom: 1px solid #dddddd;
+    color: #333333;
+    cursor: default;
+}
