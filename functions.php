@@ -2,7 +2,7 @@
 
 function kunstnerBoksen_resources() {
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Pangolin&display=swap',false );
-    wp_enqueue_style( 'style', get_stylesheet_uri(  ) );
+    wp_enqueue_style( 'style', get_stylesheet_uri());
 }
 
 add_action('wp_enqueue_scripts', 'kunstnerBoksen_resources');

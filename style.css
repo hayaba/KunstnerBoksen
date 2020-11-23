@@ -1,16 +1,23 @@
 /*
 Theme Name: Kunstner Boksen
 Author: Suong and Haya
-Version: 1.0
+Version: 2.1
 */
 
 body {
     font-family: 'Varela Round', sans-serif;
+    margin: 0;
 }
+
+header {
+    background-color: #9DBCCD;
+    margin: 0;
+}
+
 
 h1, a {
     font-family: 'Pangolin', cursive;
-    margin: 20px 0 0 0;
+    margin:0;
 }
 
 .description {
@@ -30,7 +37,7 @@ p {
 div.container {
     max-width: auto;
     margin: 0 auto;
-    padding: 0 20px;
+    
 
 }
 
@@ -106,6 +113,10 @@ article.page h2 {
     font-size: 300%;
 }
 
+
+
+/*This is page-subscription*/
+
 /* Clearfix */
 .clearfix:before, .clearfix:after {content: ""; display: table;}
 .clearfix:after {clear: both;}
@@ -138,6 +149,10 @@ div.info-box h4 {
 div.info-box p {
    font-size: 85%;
 }
+
+/* The page-subscription ends*/
+
+
 
 /* Children Links*/
 .children-links {
@@ -176,4 +191,47 @@ div.info-box p {
     border-bottom: 1px solid #dddddd;
     color: #333333;
     cursor: default;
+}
+
+/* Children Links ends */
+
+
+/*Gallery Links*/
+.gallery-links h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #111;
+    text-transform: uppercase;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.gallery-container a {
+    width: 230px;
+    margin: 20px 10px 0;
+}
+
+.gallery-container a:hover {
+    opacity: 0.8;
+}
+
+.gallery-container a div {
+    width: 100%;
+    height: 235px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery-container a h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+
 }
