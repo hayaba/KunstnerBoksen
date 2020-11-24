@@ -2,56 +2,56 @@
 
 <?php
 
-if (isset($_POST['submit'])) {
+// if (isset($_POST['submit'])) {
     
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "gallery";
+//     $servername = "localhost";
+//     $username = "root";
+//     $password = "root";
+//     $dbname = "gallery";
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+//     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-    $newFileName = $_POST['filename'];
-    if (empty($newFileName)) {
-        $newFileName = "gallery";
-    } else {
-        $newFileName = strtolower(str_replace(" ", "-", $newFileName));
-    }
+//     $newFileName = $_POST['filename'];
+//     if (empty($newFileName)) {
+//         $newFileName = "gallery";
+//     } else {
+//         $newFileName = strtolower(str_replace(" ", "-", $newFileName));
+//     }
 
-    $imageTitle = $_POST['filetitle'];
-    $imageDesc = $_POST['filedescription'];
+//     $imageTitle = $_POST['filetitle'];
+//     $imageDesc = $_POST['filedescription'];
     
-    $file = $_FILES['file'];
+//     $file = $_FILES['file'];
 
-    $fileName = $file["name"];
-    $fileType = $file["type"];
-    $fileTempName = $file["tmp_name"];
-    $fileError = $file["error"];
-    $fileSize = $file["size"];
+//     $fileName = $file["name"];
+//     $fileType = $file["type"];
+//     $fileTempName = $file["tmp_name"];
+//     $fileError = $file["error"];
+//     $fileSize = $file["size"];
 
-    $fileExt = explode(".", $fileName);
-    $fileActualExt = strtolower(end($fileExt));
+//     $fileExt = explode(".", $fileName);
+//     $fileActualExt = strtolower(end($fileExt));
 
-    $allowed = array("jpg", "jpeg", "png");
+//     $allowed = array("jpg", "jpeg", "png");
 
-    if (in_array($fileActualExt, $allowed)) {
-        if ($fileError === 0) {
-            if($fileSize < 2000000) {
-                $imageFullName = $newFileName . "." . uniqid("", true) . "." . $fileActualExt;
-                $fileDestination = "../img/gallery/" . $imageFullName;
+//     if (in_array($fileActualExt, $allowed)) {
+//         if ($fileError === 0) {
+//             if($fileSize < 2000000) {
+//                 $imageFullName = $newFileName . "." . uniqid("", true) . "." . $fileActualExt;
+//                 $fileDestination = "../img/gallery/" . $imageFullName;
 
-                echo "Ready to upload file";
-                //include_once "dbname.inc.php"; 
+//                 echo "Ready to upload file";
+//                 //include_once "dbname.inc.php"; 
                
-            }else 
-                echo "File size is too big!";
-        } else {
-            echo "You had an error!";
-        }
-    } else {
-        echo "You need to upload a proper file type!";
-    }
-}
+//             }else 
+//                 echo "File size is too big!";
+//         } else {
+//             echo "You had an error!";
+//         }
+//     } else {
+//         echo "You need to upload a proper file type!";
+//     }
+// }
 
 get_header();
 
@@ -65,7 +65,7 @@ if (have_posts()):
     <h2>Gallery</h2>
 
         <div class="gallery-container">
-            <?php
+            <!-- <?php
 
             include_once 'includes/dbh.inc.php';
 
@@ -92,7 +92,7 @@ if (have_posts()):
             <h3>This is a title</h3>
             <p>This is a paragraph</p>
             </a>';
-            ?>
+            ?> -->
         </div>
         <div class="gallery-upload">
         <form action="<?php echo $_SERVER["REQUEST_URI"] ?>" method="post" enctype="multipart/form-data">
